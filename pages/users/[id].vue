@@ -13,23 +13,23 @@
     const iftemporario = false
 
     const clickCotas = (number) => {
-        if (number == 100 ) {
-        display_number.value += 100
+        if (number == 1 ) {
+        display_number.value += 1
         } 
-        if (number == 300 ) {
-        display_number.value += 300
+        if (number == 3 ) {
+        display_number.value += 3
         } 
-        if (number == 500 ) {
-        display_number.value += 500
+        if (number == 5 ) {
+        display_number.value += 5
         } 
-        if (number == 1000 ) {
-        display_number.value += 1000
+        if (number == 10 ) {
+        display_number.value += 10
         } 
-        if (number == 3000 ) {
-        display_number.value += 3000
+        if (number == 30 ) {
+        display_number.value += 30
         } 
-        if (number == 5000 ) {
-        display_number.value += 5000
+        if (number == 0 ) {
+        display_number.value = 1
         } 
     }
 
@@ -56,38 +56,38 @@
 
     //objeto dos premiados
     const premiados = [{
-            valor: "3333333",
-            premio: "100,00 no PIX",
+            valor: "30+",
+            premio: "Desconto 20%",
             nome: "Maicon"
         },
         {
-            valor: "0000000",
-            premio: "Moto Biz",
+            valor: "10+",
+            premio: "Desconto 10%",
             nome: "Junior"
         },
         {
-            valor: "9999999",
-            premio: "100,00 no PIX",
+            valor: "5+",
+            premio: "Desconto 5%",
             nome: "Disponivel"
         },
         {
-            valor: "11111",
-            premio: "100,00 no PIX",
+            valor: "5+",
+            premio: "Desconto 5%",
             nome: "Disponivel"
         },
         {
-            valor: "222222",
-            premio: "100,00 no PIX",
+            valor: "5+",
+            premio: "Desconto 5%",
             nome: "Disponivel"
         },
         {
-            valor: "44444444",
-            premio: "100,00 no PIX",
+            valor: "5+",
+            premio: "Desconto 5%",
             nome: "Disponivel"
         },
         {
-            valor: "55555555",
-            premio: "100,00 no PIX",
+            valor: "5+",
+            premio: "Desconto 5%",
             nome: "Disponivel"
         }
         ]
@@ -131,7 +131,7 @@
                 <p>POR APENAS</p>
             </div>
             <div class="p-1 bg-black text-white font-bold rounded-lg">
-                <p class="ml-2 mr-2">R$1,00</p>
+                <p class="ml-2 mr-2"> {{ '$'+ price  }}</p>
             </div>
         </div>
     </div>
@@ -145,7 +145,7 @@
                 </svg>
             </div>
             <div class="font-bold text-2xl">
-                <p>Cotas</p>
+                <p>Unidades</p>
             </div>
         </div>
     </div>
@@ -154,25 +154,25 @@
     <!-- Cotas de cima -->
     <div class="flex mb-2 ">
         <div class="flex justify-between  w-full  cotas">
-            <div @click="clickCotas(100)" class="text-center p-8 w-2/4  bg-black text-white rounded-2xl">
+            <div @click="clickCotas(1)" class="text-center p-8 w-2/4  bg-black text-white rounded-2xl hover:scale-105 cursor-pointer">
                 <div>
-                    <p>+100</p>
+                    <p>+1</p>
                 </div>
                 <div>
                     <p>SELECIONAR</p>
                 </div>
             </div>
-            <div @click="clickCotas(300)" class="text-center p-8 w-2/4 bg-green-400 text-white rounded-2xl ml-2 mr-2">
+            <div @click="clickCotas(3)" class="text-center p-8 w-2/4 bg-green-400 text-white rounded-2xl ml-2 mr-2 hover:scale-105 cursor-pointer">
                 <div>
-                    <p>+300</p>
+                    <p>+3</p>
                 </div>
                 <div>
                     <p>SELECIONAR</p>
                 </div>
             </div>
-            <div @click="clickCotas(500)" class="text-center p-8 w-2/4 bg-black text-white rounded-2xl">
+            <div @click="clickCotas(5)" class="text-center p-8 w-2/4 bg-black text-white rounded-2xl hover:scale-105 cursor-pointer">
                 <div>
-                    <p>+500</p>
+                    <p>+5</p>
                 </div>
                 <div>
                     <p>SELECIONAR</p>
@@ -184,25 +184,25 @@
     <!-- Cotas de baixo -->
     <div class="flex mb-8">
         <div class="flex justify-between  w-full  cotas">
-            <div @click="clickCotas(1000)" class="text-center p-8 w-2/4 rounded-2xl  bg-black text-white">
+            <div @click="clickCotas(10)" class="text-center p-8 w-2/4 rounded-2xl  bg-black text-white hover:scale-105 cursor-pointer">
                 <div>
-                    <p>+1000</p>
+                    <p>+10</p>
                 </div>
                 <div>
                     <p>SELECIONAR</p>
                 </div>
             </div>
-            <div @click="clickCotas(3000)" class="text-center p-8 w-2/4 bg-black text-white rounded-2xl ml-2 mr-2">
+            <div @click="clickCotas(30)" class="text-center p-8 w-2/4 bg-black text-white rounded-2xl ml-2 mr-2 hover:scale-105 cursor-pointer">
                 <div>
-                    <p>+3000</p>
+                    <p>+30</p>
                 </div>
                 <div>
                     <p>SELECIONAR</p>
                 </div>
             </div>
-            <div @click="clickCotas(5000)" class="text-center p-8 w-2/4 bg-black text-white rounded-2xl">
+            <div @click="clickCotas(0)" class="text-center p-8 w-2/4 bg-zinc-100 text-black border border-zinc-300 rounded-2xl hover:outline outline-zinc-900 hover:scale-105 cursor-pointer">
                 <div>
-                    <p>+5000</p>
+                    <p>INICIO</p>
                 </div>
                 <div>
                     <p>SELECIONAR</p>
@@ -245,10 +245,10 @@
 
             <div class="flex flex-col ">
                 <div class="">
-                    <p class="text-2xl font-bold">Participar</p>
+                    <p class="text-2xl font-bold">Comprar</p>
                 </div>
                 <div class="">
-                    <p>{{'R$' + display_number.toFixed(2) }}</p>
+                    <p>{{'R$' + (display_number * price).toFixed(2) }}</p>
                 </div>
             </div>
         </div>
@@ -282,11 +282,11 @@
         </div>
        
         <div class="mr-3">
-            <h1 class="text-2xl font-bold">Títulos Premiados</h1>
+            <h1 class="text-2xl font-bold">Clientes Premiados</h1>
         </div>
         
         <div>
-            <p class="text-sm text-slate-500">Instantâneos</p>
+            <p class="text-sm text-slate-500">Tempo Real</p>
         </div> 
     </div>
 
@@ -294,7 +294,7 @@
     <!-- Premiados -->
     <div class="mb-8 flex flex-col bg-white rounded-lg">
       
-        <div v-for="(item, index) in premiados" :key="index" :class="index > 1 && 'bg-slate-200'" class="m-1 bg-slate-800 text-white flex justify-between items-center text-center rounded-lg"> 
+        <div v-for="(item, index) in premiados" :key="index" :class="index > 1 && 'bg-slate-300'" class="m-1 bg-slate-800 text-white flex justify-between items-center text-center rounded-lg"> 
             <div class="m-2 bg-white text-black  rounded-2xl w-1/6">
                 <p>{{ item.valor }}</p>
             </div>
@@ -321,7 +321,7 @@
         </div>
     </div>
 
-    <!-- Rankings Premiados -->
+    <!-- Ranking Premiados LABEL-->
     <div class="mb-2 flex text-start items-center w-full  rounded-2xl">
         <div class="text-yellow-400 mr-2">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7">
@@ -335,7 +335,7 @@
     </div>   
 
 
-    <!-- Trofeus Premiados -->
+    <!-- Ranking Premiados -->
     <div class="flex flex-col">
         <div class="mb-4 pb-10 flex justify-between w-full bg-white rounded-lg">
             <!-- PRIMEIRO LUGAR -->
@@ -348,8 +348,8 @@
 
                 <div class="text-black text-center text-sm">
                     <p>Junior</p>
-                    <p>130313 TITULOS</p>
-                    <p>TOTAL R$151.434,00</p>
+                    <p>13 Peças</p>
+                    <p>TOTAL R$151,00  de Desconto</p>
                 </div>
             </div>
             
@@ -363,8 +363,8 @@
 
                 <div class="text-black text-center text-sm">
                     <p>Teste</p>
-                    <p>20101 TITULOS</p>
-                    <p>TOTAL R$151.434,00</p>
+                    <p>10 Peças</p>
+                    <p>TOTAL R$91.00 de Desconto</p>
                 </div>
             </div>
 
@@ -378,14 +378,14 @@
 
                 <div class="text-black text-center text-sm">
                     <p>Henrique</p>
-                    <p>1020 TITULOS</p>
-                    <p>TOTAL R$151.434,00</p>
+                    <p>5 Peças</p>
+                    <p>TOTAL R$34,00 de Desconto</p>
                 </div>
             </div>
         </div>
 
         <div class="mb-3 ml-3 text-zinc-400">
-            <p>kljsadjaskf jaskkasd</p>
+            <p>Continue comprando!</p>
         </div>
     </div>
 </div>  

@@ -29,11 +29,7 @@
                 </div>
 
 
-                <div class="flex w-full justify-end " > 
-                    <button class="  border p-3 rounded-full bg-green-900 text-green-50 hover:bg-emerald-400">
-                            Carregar <!-- Botao que carrega div com dados da api, apenas informativo, descartavel -->
-                    </button>
-                </div>                     
+                                
             </div>
 
             

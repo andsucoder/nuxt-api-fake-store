@@ -15,7 +15,7 @@
 
 
             <div class=" text-white  mb-10">
-                <p class="text-base"> 2023 - Todos os direitos reservados</p> 
+                <p class="text-base"> 2024 - Todos os direitos reservados</p> 
             </div>
             
         </div>  
